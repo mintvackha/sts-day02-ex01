@@ -8,6 +8,12 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+
+<link rel="stylesheet" href="https://cdn.isdeliver.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.isdeliver.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.isdeliver.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.isdeliver.net/npm/botstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
 	
@@ -21,23 +27,18 @@
 			
 		
 		</tr>
-		<c:forEach var="row" items="${memberList }">
+		<c:forEach var="member" items="${memberList }">
 			<tr>
-				<th>${row.id }</th>
-				<th>${row.password }</th>
-				<th>${row.name }</th>
-				<th>${row.role }</th>
+				<th><a href="detail.do?id=${member.id}">${member.id }</th>
+				<th>${member.password }</th>
+				<th>${member.name }</th>
+				<th>${member.role }</th>
 				
 			
 			</tr>
 		</c:forEach>
-		
-			
-		
-	
 	</table>
 	
 	<a href="input.do">등록</a>
-	
 </body>
 </html>

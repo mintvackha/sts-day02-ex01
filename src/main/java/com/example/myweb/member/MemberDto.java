@@ -15,7 +15,6 @@ public class MemberDto {
 	}
 	
 	public MemberDto(String id, String password, String name, String role) {
-		super();
 		this.id = id;
 		this.password = password;
 		this.name = name;
